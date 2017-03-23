@@ -15,15 +15,17 @@ public class CalculoBhaskara {
     public static void main(String[] args) {
         Scanner console = new Scanner (System.in);
         
+        //Programa Bhaskaras as Avessas
+        
         //ENTRADAS
         System.out.print("Coloque o Valor de X1: ");
-        double x1 = console.nextDouble();
+        double x1 = Double.parseDouble(console.nextLine());
         
         System.out.print("Coloque o Valor de X2: ");
-        double x2 = console.nextDouble();
+        double x2 = Double.parseDouble(console.nextLine());
         
         System.out.print("Coloque o Valor de C: ");
-        double c = console.nextDouble();
+        double c = Double.parseDouble(console.nextLine());
         
         //PROCESSAMENTO
         double s = x1 + x2;
