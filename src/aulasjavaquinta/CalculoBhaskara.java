@@ -15,27 +15,26 @@ public class CalculoBhaskara {
     public static void main(String[] args) {
         Scanner console = new Scanner (System.in);
         
-        //Programa Bhaskaras as Avessas
+        //Calculo de Bhaskara
         
-        //ENTRADAS
-        System.out.print("Coloque o Valor de X1: ");
-        double x1 = Double.parseDouble(console.nextLine());
+        //ENTRADA
+        System.out.println("Coloque o Valor de A: ");
+        double a = console.nextDouble();
         
-        System.out.print("Coloque o Valor de X2: ");
-        double x2 = Double.parseDouble(console.nextLine());
+        System.out.println("Coloque o Valor de B: ");
+        double b = console.nextDouble();
         
-        System.out.print("Coloque o Valor de C: ");
-        double c = Double.parseDouble(console.nextLine());
+        System.out.println("Coloque o Valor de C: ");
+        double c = console.nextDouble();
         
         //PROCESSAMENTO
-        double s = x1 + x2;
-        double p = x1 * x2;
-        double a = c / p;
-        double b = - (s * a);
+        double delta = (b*b) - ((4 * a) * c);
+        double x1 = -b + Math.sqrt(delta) / 2 * a;
+        double x2 = -b - Math.sqrt(delta) / 2 * a;
+        
         
         //SAIDA
-        System.out.println("A equação que tem raizes x1: " +x1+ " e x2: " +x2+ " é " +a+ "xª + " +b+ "x + " +c);
-               
-        
+        System.out.println("x1: " + x1);
+        System.out.println("x2: " + x2);
     }
 }
