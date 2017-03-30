@@ -34,7 +34,12 @@ public class CalculoBhaskara {
         
         
         //SAIDA
-        System.out.println("x1: " + x1);
-        System.out.println("x2: " + x2);
+        if(delta < 0){
+            System.out.println("Não Existe Raiz Real");
+        }else{
+            System.out.println("x1: " + x1);
+            System.out.println("x2: " + x2);
+        }
+
     }
 }

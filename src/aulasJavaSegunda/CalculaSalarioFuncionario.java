@@ -17,16 +17,36 @@ public class CalculaSalarioFuncionario {
         
         System.out.println("Digite o Nome do Funcionario:");
         String nome = console.next();
-        System.out.println("Digite o Numero de Horas Trabalhada: ");
+        System.out.println("Digite Seu Nivel de 1 a 5: ");
+        int nivel = console.nextInt();
+        System.out.println("Digite a Quantidade de Horas Trabalhada: ");
         double numHoras = console.nextDouble();
-        System.out.println("Digite o Valor que Recebe por Hora Trabalhada: ");
-        double valorHoras = console.nextDouble();
+        
+        double valorHoras = 0;
+        
+        if(nivel == 1){
+            valorHoras = 15.00;
+        }
+        else if(nivel == 2){
+            valorHoras = 18.00;
+        }
+        else if(nivel == 3){
+            valorHoras = 22.00;
+        }
+        else if(nivel == 4){
+            valorHoras = 27.00;
+        }
+        else if(nivel == 5){
+            valorHoras = 33.00;
+        }
+        
         
         double salario = numHoras * valorHoras;
-        
-        System.out.printf("O Funcionario %s, Trabalhou %.0f Horas e Recebera: R$%.2f ",
+        System.out.printf("O Funcionario %s, Trabalhou %.0f Horas por R$ %.2f (Nivel: %d) e deve Receber: R$%.2f ",
                 nome,
                 numHoras,
+                valorHoras,
+                nivel,
                 salario);
     }
 }

@@ -22,16 +22,19 @@ public class AulaIfElse_Exercicio3 {
         System.out.print("Digite Seu Peso: ");
         double peso = console.nextDouble();
         
-        double massa = peso / Math.pow(altura,2);
+        double imc = peso / Math.pow(altura,2);
         
-        if(massa < 26){
-        System.out.println("Sua Massa Corpórea está Normal");
+        if(imc < 18.5){
+        System.out.println("Abaixo do Peso");
         }
-        else if(massa >= 26 && massa < 30){
-            System.out.println("Sua Massa Corpórea está Obeso");
+        else if(imc < 25){
+            System.out.println("Peso Normal");
         }
-        else if(massa >= 30){
-            System.out.println("Sua Massa Corpórea está Obeso Mórbido");
+        else if(imc < 30){
+            System.out.println("Acima Do Peso");
+        }
+        else if(imc >= 30){
+            System.out.println("Obesidade");
         }
     }
 }
