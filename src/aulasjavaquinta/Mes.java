@@ -13,15 +13,6 @@ import java.util.Scanner;
  */
 public class Mes {
     
-    public enum NomeMes {
-	J(11),Q(12),K(13),A(14);
-
-	public int valorCarta;
-	CartasEnum(int valor) {
-		valorCarta = valor;
-	}
-}
-    
     public static void main(String[] args) {
         Scanner console = new Scanner(System.in);
         
@@ -29,7 +20,7 @@ public class Mes {
         System.out.print("Mês: ");
         int dias;
         int mes = console.nextInt();
-        
+        String nomeMes = "";
         //PROCESSAMENTO
         
         if(mes == 2){
@@ -40,9 +31,39 @@ public class Mes {
             } else{
                 dias = 31;
             }
-        }   
+        }
+        
+        if(mes == 1){
+            nomeMes = "Janeiro";
+        }else if(mes == 2){
+            nomeMes = "Fevereiro";
+        }else if(mes == 3){
+            nomeMes = "Março";
+        }else if(mes == 4){
+            nomeMes = "Abril";
+        }else if(mes == 5){
+            nomeMes = "Maio";
+        }else if(mes == 6){
+            nomeMes = "Junho";
+        }else if(mes == 7){
+            nomeMes = "Julho";
+        }else if(mes == 8){
+            nomeMes = "Agosto";
+        }else if(mes == 9){
+            nomeMes = "Setembro";
+        }else if(mes == 10){
+            nomeMes = "Outubro";
+        }else if(mes == 11){
+            nomeMes = "Novembro";
+        }else if(mes == 12){
+            nomeMes = "Dezembro";
+        }
         
         //SAIDA
-        System.out.println("o Mês " +mes+ " tem: " +dias+ " Dias.");
+        if(mes < 1 || mes > 12){
+            System.out.println("Não Existe Mês: " +mes);
+        }else{
+            System.out.println("o Mês de " +nomeMes+ " tem: " +dias+ " Dias.");
+        }
     }
 }
