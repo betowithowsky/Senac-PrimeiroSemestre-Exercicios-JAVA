@@ -29,8 +29,8 @@ public class MelhorCombustivel {
         
         double kmlG = kmPercorrido / litrosG;
         double kmlA = kmPercorrido / litrosA;
-        double totalG = kmlG * custoG;
-        double totalA = kmlA * custoA;
+        double totalG = litrosG * custoG;
+        double totalA = litrosA * custoA;
 
         System.out.println(totalG);
         System.out.println(totalA);
@@ -39,6 +39,8 @@ public class MelhorCombustivel {
 
         if (totalG < totalA) {
             System.out.println("A Melhor Opção a se usar é a Gasolina");
+        }else{
+            System.out.println("A Melhor Opção a se usar é Alcool");
         }
 
     }
