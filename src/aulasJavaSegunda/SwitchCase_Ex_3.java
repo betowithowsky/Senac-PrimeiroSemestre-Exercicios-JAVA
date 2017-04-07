@@ -50,7 +50,7 @@ public class SwitchCase_Ex_3 {
         
         switch(notas){
             case 100:
-                System.out.println("%d notas de R$ 100,00\n", notas);
+                System.out.printf("%d notas de R$ 100,00\n", notas);
             case 50:
                 System.out.println("aulasJavaSegunda.SwitchCase_Ex_3.main()");
             case 10:

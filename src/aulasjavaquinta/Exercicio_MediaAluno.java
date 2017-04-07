@@ -50,3 +50,4 @@ public class Exercicio_MediaAluno {
             System.out.println("Você já está automaticamente Reprovador por Faltas!!");
 }
 }
+}
