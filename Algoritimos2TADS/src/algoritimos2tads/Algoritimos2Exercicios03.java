@@ -22,8 +22,10 @@ public class Algoritimos2Exercicios03 {
     
     public static int quadrado(int num){
         int quad = 0;
-        for(int i = 0; i < num; i++){
-            quad += num;
+        int impar = 1;
+        for(int i = 1; i <= num; i++){
+            quad += impar;
+            impar += 2;
         }
         
         return quad;

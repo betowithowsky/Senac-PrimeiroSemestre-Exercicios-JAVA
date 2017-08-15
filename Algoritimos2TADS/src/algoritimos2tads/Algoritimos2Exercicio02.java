@@ -27,12 +27,15 @@ public class Algoritimos2Exercicio02 {
         num2 = input.nextInt();
         }while(num1 <= 0 || num2 <= 0);
         
-        System.out.println(SomadoisNumeros(num1, num2));
+        System.out.println(somaIntervalo(num1, num2));
     }
     
     
-    public static int SomadoisNumeros(int num1,int num2){
-        int resultado = num1 + num2;
+    public static int somaIntervalo(int num1,int num2){
+        int resultado = 0;
+        for(int i = num1; i <= num2; i++){
+            resultado += + i;
+        }
         
         return resultado;
     }
